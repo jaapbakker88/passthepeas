@@ -1,5 +1,24 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Post = styled.div`
+  display: block;
+  width: 690px;
+  margin: 0 auto;
+  @media(max-width: 890px) {
+    display: block;
+  }
+`
+
+const Head = styled.div`
+  flex: 1;
+`
+
+const Content = styled.div`
+  width: 100%;
+  max-width: 690px;;
+`
 
 class PageTemplate extends Component {
   render() {
@@ -8,10 +27,14 @@ class PageTemplate extends Component {
     const currentPage = this.props.data.wordpressPage;
 
     return (
-      <div>
-        <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
-        <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
-      </div>
+      <Post>
+        <Head>
+          <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
+        </Head>
+        <Content>
+          <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
+        </Content>
+      </Post>
     )
   }
 }

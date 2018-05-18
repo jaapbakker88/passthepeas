@@ -45,7 +45,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         // We want to create a detailed page for each
         // page node. We'll just use the WordPress Slug for the slug.
         // The Page ID is prefixed with 'PAGE_'
-        _.each(result.data.allWordpressPage.edges, edge => {
+        const filtered = result.data.allWordpressPage.edges.filter(node => node.node.slug != 'home')
+
+        _.each(filtered, edge => {
           // Gatsby uses Redux to manage its internal state.
           // Plugins and sites can use functions like "createPage"
           // to interact with Gatsby.
