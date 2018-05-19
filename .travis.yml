@@ -13,4 +13,13 @@ cache:
     - "node_modules"
 
 after_success:
-  - gatsby build --prefix-paths && gh-pages -d public
+  - gatsby build --prefix-paths
+  # && gh-pages -d public
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $SECURE  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
