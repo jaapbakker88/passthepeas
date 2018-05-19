@@ -13,10 +13,4 @@ cache:
     - "node_modules"
 
 after_success:
-  - npm run deploy
-
-# safelist
-branches:
-  only:
-  - master
-
+  - gatsby build --prefix-paths && gh-pages -d public
