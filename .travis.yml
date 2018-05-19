@@ -3,6 +3,7 @@ node_js:
   - 9
 before_script:
   - npm install -g gatsby-cli
+  - git config --global
   - git config --global github-oauth.github.com "$githubsecuritytoken"
 cache:
   directories:
