@@ -4,7 +4,7 @@ node_js:
 before_script:
   - npm install -g gatsby-cli
   - before_install:
-  - composer config --global github-oauth.github.com "$githubsecuritytoken"
+  - git config --global github-oauth.github.com "$githubsecuritytoken"
 cache:
   directories:
     - "node_modules"
