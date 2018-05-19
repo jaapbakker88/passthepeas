@@ -3,13 +3,14 @@ node_js:
   - 9
 before_script:
   - npm install -g gatsby-cli
-  - git config --global
-  - git config --global github-oauth.github.com "$githubsecuritytoken"
 cache:
   directories:
     - "node_modules"
 
-after_success: npm run deploy
+after_success:
+  - git config --global github-oauth.github.com "$githubsecuritytoken"
+  - npm run deploy
+
 # safelist
 branches:
   only:
