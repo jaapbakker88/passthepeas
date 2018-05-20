@@ -34,6 +34,9 @@ const Content = styled.div`
     max-width: 960px;
     padding-top: 0;
   }
+  @media(max-width: 960px) {
+    padding: 0 15px;
+  }
 `
 
 const Layout = ({ children, data }) => {
