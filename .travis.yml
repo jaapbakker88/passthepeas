@@ -6,8 +6,8 @@ env:
     secure: "g6n+n2lVmzGIcQAEK/3GnOTsECXIyHb6l84X6Sqk+Gk/BFyZ3gg4t9CHtchFPqR3YQy9mKcORMvCywz0bz7+qLigZmCfAPCPDMdztZ3yTnrEmymB6qgWIxm15BqN7qsKnLEyaTDXuPUj/feIeb3JL2FAhWB54Sa5Wc7/JGeDu9hMoARsAvO1ioTA3xb68C6lZ9cc9tg9xM+zokNyuqmKNN8J6Wjl/w9OC1MblIlz1Zi0+IZ9ahcfoDB49WDd5C7/l9jkjlOl1yS1iOYo+hAXgt3lFIgm9aymMzgETaN3jXg+hrULstffFcsO90ugxfdVuoiHIS1bsRWXKcztr/sFaxyzQsDzgfM8p8swt5phNfCVglSvZkbPtyOlSwhZ20goQKJ7w4/Oe+p5hD6ayQGGcyQlybhNJk0zD0slWq58opQ2oqN7kia+Eq/4aQT/ghr8Qa8sIBzKY2aReTCu8nM9h0vz/gKZ6TK9IDI6MQR6/4rX9nHlny1NgMMDU2Xv1znXHHaKuQwOj+pLe2v7wKQ6N6IBJuEy7GPyeI35qelUN3FjI7w0dluPMAgem9B6/ieFLkwT/uQHopUTCj724ox77X/1AnXcLzwtJg6vvtYyZTzcFTJ+rrooNOVsU16XaV+EBfP7JbSDtEE3dbR0ON00aw71RDp8nwQG4QR91fAKx2o="
 before_script:
   - npm install -g gatsby-cli
-  - git config --global user.email "jaap.bakker@gmail.com"
-  - git config --global user.name "jaapbakker88"
+  - git config --global user.email "hello@bakkerlabs.nl"
+  - git config --global user.name "TravisCI"
 cache:
   directories:
     - "node_modules"
@@ -24,3 +24,9 @@ deploy:
   local-dir: 'public'
   on:
     branch: master
+
+# safelist
+branches:
+  only:
+  - master
+  - stable
