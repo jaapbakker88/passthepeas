@@ -1,2 +1,0 @@
-webpackJsonp([0xc676b7e741d7],{346:function(t,e){t.exports={data:{wordpressPost:{title:"TEST 1234",content:"<p>What the f</p>\n"},site:{siteMetadata:{title:"Pass The Peas"}}},pathContext:{id:"702bf541-aedb-58ef-af5f-de527580e051"}}}});
-//# sourceMappingURL=path---blog-test-1234-c9087fd2e0d3ba18ff8d.js.map
