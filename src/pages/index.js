@@ -5,9 +5,7 @@ const IndexPage = ({data}) => {
 
   return(
     <div>
-      <h1>Hoi mensen.</h1>
-      <p>Welkom bij Pass the Peas.</p>
-      <p>We zijn nog even bezig het opmaken van deze pagina, bekijk anders ondertussen even waar wij komende tijd staan met onze truck:</p>
+      <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }}></div>
       <Link to="/agenda/">Naar de agenda</Link>
 
     </div>
@@ -18,8 +16,12 @@ const IndexPage = ({data}) => {
 
 export default IndexPage
 
-// export const indexQuery = graphql`
-//   query indexPageQuery {
-
-//   }
-// `
+export const indexQuery = graphql`
+  query homePage {
+    wordpressPage (slug:{ eq: "home"}) {
+      date
+      title
+      content
+    }
+  }
+`
