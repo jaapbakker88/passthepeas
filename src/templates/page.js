@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import Header from '../components/header'
+
 const Post = styled.div`
   display: block;
   width: 690px;
@@ -27,14 +29,17 @@ class PageTemplate extends Component {
     const currentPage = this.props.data.wordpressPage;
 
     return (
-      <Post>
-        <Head>
-          <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
-        </Head>
-        <Content>
-          <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
-        </Content>
-      </Post>
+      <div>
+        <Header headerHeight="400px" color="green"/>
+        <Post>
+          <Head>
+            <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
+          </Head>
+          <Content>
+            <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
+          </Content>
+        </Post>
+      </div>
     )
   }
 }

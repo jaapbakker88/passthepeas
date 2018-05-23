@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Pass The Peas',
   },
-  plugins: ['gatsby-plugin-react-helmet',
+  plugins: ['gatsby-plugin-react-helmet', `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-wordpress`,
       options: {
