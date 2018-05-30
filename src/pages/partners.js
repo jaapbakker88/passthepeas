@@ -2,11 +2,15 @@
 import React, { Component } from "react"
 import Link from "gatsby-link"
 import PropTypes from "prop-types"
+import PageWrapper from "../components/PageWrapper";
+import Header from "../components/header";
 
 const PartnersTemplate = ({data}) => {
   const partners = data.allWordpressWpPtpPartner.edges;
     return (
       <div>
+      <Header headerHeight="400px"/>
+      <PageWrapper>
         <h1>Partners</h1>
 
         {partners.map(({ node }) => (
@@ -15,6 +19,7 @@ const PartnersTemplate = ({data}) => {
           </div>
         ))}
 
+      </PageWrapper>
       </div>
     )
 
