@@ -10,7 +10,7 @@ const HeaderWrapper = styled.div`
   height: ${props => props.headerHeight ? props.headerHeight : 'calc(100vh - 65px)'};
   width: 100%;
   position: relative;
-  background: ${props => props.color ? props.color : 'rebeccapurple'};
+  background: ${props => props.color ? props.color : 'rgba(0,0,0,0.8)'};
   // margin-bottom: 100px;
   img {
     position: absolute; width: inherit; height: inherit; object-fit: cover;

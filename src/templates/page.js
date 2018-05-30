@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Header from '../components/header'
+import Header from '../components/header';
+import PageWrapper from '../components/PageWrapper';
 
 const Post = styled.div`
   display: block;
@@ -11,16 +12,11 @@ const Post = styled.div`
   @media(max-width: 890px) {
     display: block;
   }
-`
+`;
 
 const Head = styled.div`
   flex: 1;
-`
-
-const Content = styled.div`
-  width: 100%;
-  max-width: 690px;;
-`
+`;
 
 class PageTemplate extends Component {
   render() {
@@ -30,15 +26,13 @@ class PageTemplate extends Component {
 
     return (
       <div>
-        <Header headerHeight="400px" color="green"/>
-        <Post>
+        <Header headerHeight="400px"/>
+        <PageWrapper>
           <Head>
             <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
           </Head>
-          <Content>
-            <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
-          </Content>
-        </Post>
+          <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
+        </PageWrapper>
       </div>
     )
   }

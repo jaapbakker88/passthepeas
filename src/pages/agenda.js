@@ -4,7 +4,9 @@ import Link from "gatsby-link"
 import PropTypes from "prop-types"
 import moment from 'moment';
 
+import Header from '../components/header';
 import AgendaItem from '../components/AgendaItem';
+import PageWrapper from "../components/PageWrapper";
 
 const AgendaTemplate = ({ data }) => {
   const agendaItems = data.allWordpressWpPtpEvent.edges;
@@ -13,13 +15,16 @@ const AgendaTemplate = ({ data }) => {
   const filteredItems = agendaItems.filter(({node}) => new Date(moment(node.acf.end_date)) >= new Date(d));
   return (
     <div>
-      <h1>Agenda</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-        {filteredItems.map(({ node }) => (
-          <AgendaItem key={node.id} item={node} />
-        ))}
-      </div>
+      <Header headerHeight="400px" />
+      <PageWrapper>
+        <h1>Agenda</h1>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+          {filteredItems.map(({ node }) => (
+            <AgendaItem key={node.id} item={node} />
+          ))}
+        </div>
 
+      </PageWrapper>
     </div>
   )
 
