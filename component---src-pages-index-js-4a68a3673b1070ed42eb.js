@@ -1,2 +1,0 @@
-webpackJsonp([35783957827783],{211:function(e,t,a){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0,t.indexQuery=void 0;var d=a(2),r=n(d),u=a(36),l=n(u),o=function(e){var t=e.data;return r.default.createElement("div",null,r.default.createElement("div",{dangerouslySetInnerHTML:{__html:t.wordpressPage.content}}),r.default.createElement(l.default,{to:"/agenda/"},"Naar de agenda"))};t.default=o;t.indexQuery="** extracted graphql fragment **"}});
-//# sourceMappingURL=component---src-pages-index-js-4a68a3673b1070ed42eb.js.map
