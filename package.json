@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.250",
+    "gatsby": "^5.3.3",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-styled-components": "^2.0.11",
-    "gatsby-source-wordpress": "^2.0.84",
+    "gatsby-source-wordpress": "^7.3.2",
     "lodash-webpack-plugin": "^0.11.5",
     "moment": "^2.22.1",
     "react-helmet": "^5.2.0",
